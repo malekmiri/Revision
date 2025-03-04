@@ -1,0 +1,16 @@
+{
+  "residence": [
+    {
+      "id": "897",
+      "name": "Yaaahhoo",
+      "address": "78 uuui",
+      "status": "disponible"
+    },
+    {
+      "id": "123",
+      "name": "Mlekk",
+      "address": "12 rue",
+      "status": "disponible"
+    }
+  ]
+}
