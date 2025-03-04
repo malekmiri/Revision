@@ -11,7 +11,11 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path:'residence',component:ResidenceComponent},
-  {path:'addResidence',component:FormAjoutComponent},
+  {path:'residence',component:ResidenceComponent,
+    children:[
+      {path:'addResidence',component:FormAjoutComponent}]
+    },
+  //{path:'addResidence',component:FormAjoutComponent},
   {path:"residence/detailsresidence/:id",component:DetailsResidenceComponent},
   {path:"residence/update/:id",component:UpdateResidenceComponent}
 
@@ -21,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
