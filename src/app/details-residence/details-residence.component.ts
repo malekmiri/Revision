@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ServiceService } from '../service/service.service';
-import { Residence } from 'src/core/models/residence';
+import { Agence } from 'src/core/models/agence';
 
 @Component({
   selector: 'app-details-residence',
@@ -10,7 +10,7 @@ import { Residence } from 'src/core/models/residence';
 })
 export class DetailsResidenceComponent implements OnInit {
  id!:number
- listRes:Residence=new Residence
+ listRes:Agence=new Agence
 
   constructor(private act:ActivatedRoute,private resServ:ServiceService) { }
 

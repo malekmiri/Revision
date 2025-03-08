@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service/service.service';
-import { Residence } from 'src/core/models/residence';
+import { Agence } from 'src/core/models/agence';
 
 @Component({
   selector: 'app-residence',
@@ -9,7 +9,7 @@ import { Residence } from 'src/core/models/residence';
 })
 export class ResidenceComponent implements OnInit {
 
-  listServiceResidence: Residence[]=[]
+  listServiceResidence: Agence[]=[]
 
   constructor(private resService:ServiceService) { }
 
@@ -20,17 +20,16 @@ export class ResidenceComponent implements OnInit {
      })
   }
 
-  listResidences:Residence[]=[
-    {id:1,"name": "El fel","address":"Borj Cedria",status: "Disponible"},
-    {id:2,"name": "El yasmine",
-    "address":"Ezzahra", status:"Disponible" },
-    {id:3,"name": "El Arij","address":"Rades",status:"Vendu"},
-    {id:4,"name": "El Anber","address":"inconnu",status: "En Construction"}
+  listResidences:Agence[]=[
+    {id:1,"matF": 2,"nom":"Borj Cedria",status:true},
+    {id:2,"matF": 5,"nom":"Borj Cedria",status:false},
+    {id:3,"matF": 78,"nom":"Borj Cedria",status:true},
+    {id:4,"matF": 66,"nom":"Borj Cedria",status:false},
     ];
 
     deleteResidence(id:any){
       this.resService.deleteResidence(id).subscribe(()=>{
-      console.log("residence deleted")
+      console.log("agence deleted")
       this.ngOnInit() //trefrechi page zeda
       })
       

@@ -1,29 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Residence } from 'src/core/models/residence';
+import { Agence } from 'src/core/models/agence';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  URL = 'http://localhost:3000/residence';
+  URL = 'http://localhost:3000/agence';
   constructor(private http: HttpClient) {}
-  getallResidence():Observable<Residence[]>{
-    return this.http.get<Residence[]>(this.URL)
+  getallResidence():Observable<Agence[]>{
+    return this.http.get<Agence[]>(this.URL)
   }
-  addResidence(res:Residence):Observable<Residence[]>{
-    return this.http.post<Residence[]>(this.URL,res)
+  addResidence(res:Agence):Observable<Agence[]>{
+    return this.http.post<Agence[]>(this.URL,res)
   }
-  updateResidence(res:Residence,id:any):Observable<Residence[]>{
-    return this.http.put<Residence[]>(this.URL+'/'+id,res)
+  updateResidence(res:Agence,id:any):Observable<Agence[]>{
+    return this.http.put<Agence[]>(this.URL+'/'+id,res)
   }
-  getResidence(id:any):Observable<Residence>{
-    return this.http.get<Residence>(this.URL+'/'+id)
+  getResidence(id:any):Observable<Agence>{
+    return this.http.get<Agence>(this.URL+'/'+id)
   }
-  deleteResidence(id:any):Observable<Residence[]>{
-    return this.http.delete<Residence[]>(this.URL+'/'+id)
+  deleteResidence(id:any):Observable<Agence[]>{
+    return this.http.delete<Agence[]>(this.URL+'/'+id)
   }
   } 
 

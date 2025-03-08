@@ -12,7 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormAjoutComponent } from './form-ajout/form-ajout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsResidenceComponent } from './details-residence/details-residence.component';
-import { UpdateResidenceComponent } from './update-residence/update-residence.component';
+import { AgenceComponent } from './agence/agence.component';
+import { AgenceDetailsComponent } from './agence-details/agence-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UpdateResidenceComponent } from './update-residence/update-residence.co
     FooterComponent,
     FormAjoutComponent,
     DetailsResidenceComponent,
-    UpdateResidenceComponent
+    AgenceComponent,
+    AgenceDetailsComponent,
   ],
   imports: [
     BrowserModule,

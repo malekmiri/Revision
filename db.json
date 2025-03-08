@@ -1,16 +1,34 @@
 {
-  "residence": [
+  "agence": [
     {
-      "id": "897",
-      "name": "Yaaahhoo",
-      "address": "78 uuui",
-      "status": "disponible"
+      "id": "996",
+      "nom": "Hethy",
+      "matF": "1234",
+      "status": false
+    },
+    {
+      "id": "88",
+      "nom": "peepboop",
+      "matF": "547",
+      "status": "true"
+    },
+    {
+      "id": "654",
+      "nom": "mouna",
+      "matF": "145",
+      "status": "true"
+    },
+    {
+      "id": "88",
+      "nom": "Malek",
+      "matF": "456",
+      "status": false
     },
     {
       "id": "123",
-      "name": "Mlekk",
-      "address": "12 rue",
-      "status": "disponible"
+      "nom": "malekkkkkktest",
+      "matF": "7885",
+      "status": false
     }
   ]
 }

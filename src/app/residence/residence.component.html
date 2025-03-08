@@ -1,13 +1,12 @@
-<router-outlet></router-outlet>
-<p>residences works!</p>
+<p>agences works!</p>
 <div class="row">
     <div *ngFor="let i of listServiceResidence" class="card m-3" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">{{i.name | uppercase}}</h5>
-          <p class="card-text">{{i.address}}</p>         
+          <h5 class="card-title">{{i.nom | uppercase}}</h5>
+          <p class="card-text">{{i.matF}}</p>   
+          <p class="card-text">{{i.status}}</p>      
           <button class="btn btn-danger" (click)="deleteResidence(i.id)">Delete</button>
-          <button class="btn btn-success" [routerLink]="['update',i.id]">Update</button>
-          <button class="btn btn-dark" [routerLink]="['detailsresidence',i.id]">Show Details</button>
+         <!-- <button class="btn btn-dark" [routerLink]="['detailsresidence',i.id]">Show Details</button>-->
     
     
         </div>

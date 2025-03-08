@@ -13,13 +13,12 @@ export class FormAjoutComponent implements OnInit {
   formR!:FormGroup
   constructor(private resService:ServiceService,private router:Router) { }
   ngOnInit(): void {
-  this.formR=new FormGroup({
-    id:new FormControl('',[Validators.required,Validators.minLength(3)]),
-    name:new FormControl('',[Validators.required,Validators.pattern(/^[A-Z][a-z]/)]),
-    address:new FormControl('',[Validators.required,Validators.maxLength(10)]),
-    status:new FormControl('',[Validators.required,Validators.pattern(/^disponible$/)]),
-
-  })
+  this.formR = new FormGroup({
+    id: new FormControl(''),
+    nom: new FormControl(''),
+    matF: new FormControl(''),
+    status: new FormControl(false, Validators.requiredTrue)
+  });
   }
   get status(){
     return this.formR.get('status')
@@ -28,7 +27,7 @@ export class FormAjoutComponent implements OnInit {
 {
   this.resService.addResidence(this.formR.value).subscribe(()=>{
     console.log('added!')
-    this.router.navigate(['/residence'])
+    this.router.navigate(['/listAgence'])
 })
 }
 }
